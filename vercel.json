@@ -5,16 +5,6 @@
         "src": "server.js",
         "use": "@vercel/node"
       }
-    ],
-    "routes": [
-      {
-        "src": "/api/clients",
-        "dest": "/api/clients.js"
-      },
-      {
-        "src": "/api/commandes",
-        "dest": "/api/commandes.js"
-      }
     ]
   }
   
