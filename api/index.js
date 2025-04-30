@@ -9,8 +9,11 @@ const commandeRoutes = require('./routes/commandeRoutes');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+// Affichage de la variable MONGO_URI pour vérifier qu'elle est bien lue
+console.log("MONGO_URI:", process.env.MONGO_URI);  // Affiche l'URI MongoDB dans la console pour le débogage
+
 // Connexion à MongoDB avec gestion des erreurs
-mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(process.env.MONGO_URI)
     .then(() => console.log('✅ Connecté à MongoDB'))
     .catch(err => {
         console.error('❌ Erreur MongoDB :', err);
